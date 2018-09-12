@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.detail_activity.*
 
 class DetailActivity : AppCompatActivity() {
 
-  private val ANIM_DURATION = 200
+  private val ANIM_DURATION = 250
 
   companion object {
     fun newIntent(context: Context, left: Int, top: Int, width: Int, height: Int): Intent {
@@ -124,7 +124,10 @@ class DetailActivity : AppCompatActivity() {
   }
 
   override fun onBackPressed() {
-    exitAnimation(Runnable { ivImage.post { finish() } })
+    exitAnimation(Runnable {
+      finish()
+      overridePendingTransition(0, 0)
+    })
   }
 
 
