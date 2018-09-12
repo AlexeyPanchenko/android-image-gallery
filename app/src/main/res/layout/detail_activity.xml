@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-  xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-  android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:paddingTop="70dp"
+  android:paddingBottom="70dp"
+  android:id="@+id/rlParent"
+  tools:context=".MainActivity">
 
-</android.support.constraint.ConstraintLayout>
+  <ImageView
+    android:id="@+id/ivImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:src="@color/colorAccent" />
+
+</RelativeLayout>

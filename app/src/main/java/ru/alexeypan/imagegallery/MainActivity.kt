@@ -9,7 +9,20 @@ class MainActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
-    val screenLocation = IntArray(2)
-    ivImage.getLocationOnScreen(screenLocation)
+
+
+    ivImage.setOnClickListener {
+      val screenLocation = IntArray(2)
+      ivImage.getLocationOnScreen(screenLocation)
+      startActivity(
+        DetailActivity.newIntent(
+          this,
+          screenLocation[0],
+          screenLocation[1],
+          ivImage.width,
+          ivImage.height
+        )
+      )
+    }
   }
 }
